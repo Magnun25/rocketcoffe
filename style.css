@@ -24,10 +24,15 @@
 body {
   
   margin: auto;
-  background: black url(assets/blur-1.png) no-repeat fixed bottom;
+  background: black url(assets/blur-mobile.png) no-repeat fixed bottom;
   background-size: cover;
   background-color: var(--backgrond);
   color: var(--text-color);
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
 }
 
 /* --------- HEADER ------------- */
@@ -44,6 +49,60 @@ header {
 
   border-bottom: 1px solid #29292E;
 }
+
+/* -------- NAVIGATION ------------ */
+nav {
+  visibility: hidden;
+  opacity: 0;
+}
+
+nav.menuOpen {
+  visibility: visible;
+  opacity: 1;
+
+  height: 100%;
+  width: 100%;
+
+  background-color: var(--backgrond);
+
+  position: fixed;
+  top: 0;
+  
+}
+
+nav.menuOpen header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: auto;
+  padding-inline: 2.8rem;
+
+  height: 9.55rem;
+
+  border-bottom: 1px solid #29292E;
+}
+
+.navigation {
+display: flex;
+align-items: center;
+box-sizing: border-box;
+
+
+font-size: 1.8rem;
+line-height: 2.5rem;
+font-weight: 400;
+color: var(--text-color-menu-mobile);
+
+height: 5.7rem;
+border-bottom: 1px solid #29292E;
+
+}
+
+.navigation a {
+  margin-left: 3.1rem;
+}
+
 
 /* --------- MAIN ------------- */
 
@@ -97,7 +156,7 @@ main button {
 
 }
 
-main div {
+main > div {
   text-align: center;
   font-weight: 700;
   font-size: 2.5rem;
@@ -113,6 +172,8 @@ main span {
   color: #000;
 }
 
-main > img{
+main > img {
   max-width: 100%;
 }
+
+@media ()
