@@ -11,14 +11,108 @@
   --border: #29292E;
   --border-menu-mobile: #A8A8B3;
   --text-color-menu-mobile: #E1E1E6;
+
+  font-size: 62.5%; /* 1rem == 10px */
 }
 
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Manrope', sans-serif;;
+  font-family: 'Manrope', sans-serif;
 }
 
 body {
-  width: ;
+  
+  margin: auto;
+  background: black url(assets/blur-1.png) no-repeat fixed bottom;
+  background-size: cover;
+  background-color: var(--backgrond);
+  color: var(--text-color);
+}
+
+/* --------- HEADER ------------- */
+header {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: auto;
+  padding-inline: 2.8rem;
+
+  height: 9.55rem;
+
+  border-bottom: 1px solid #29292E;
+}
+
+/* --------- MAIN ------------- */
+
+main {
+  margin: auto;
+  max-width: 42.8rem;
+}
+
+main h2 {
+  display: block;
+  max-width: 37.3rem;
+  height: 12.8rem;
+  margin: auto;
+
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 4.1rem;
+  text-align: center;
+  letter-spacing: 0.02rem;
+
+  color: #FFFFFF;
+
+  margin-top: 8.85rem;
+  margin-bottom: 8.8rem;
+}
+
+main button {
+
+  background-color: #000;
+  color: #FFF;
+  margin: auto;
+  margin-bottom: 10.8rem;
+
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 3rem;
+  gap: 1rem;
+
+
+  width: 17.412rem;
+  height: 3.5rem;
+
+  border: 1px solid #8257E5;
+  border-radius: 6rem;
+
+}
+
+main div {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 6.8rem;
+  letter-spacing: -0.03rem;
+
+  margin-bottom: 2.5rem;
+}
+
+
+main span {
+  text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+  color: #000;
+}
+
+main > img{
+  max-width: 100%;
 }
