@@ -28,11 +28,16 @@ body {
   background-size: cover;
   background-color: var(--backgrond);
   color: var(--text-color);
+  position: relative;
 }
 
 a {
   color: var(--text-color);
   text-decoration: none;
+}
+
+.button {
+  cursor: pointer;
 }
 
 /* --------- HEADER ------------- */
@@ -54,9 +59,10 @@ header {
 nav {
   visibility: hidden;
   opacity: 0;
+  position: absolute;
 }
 
-nav.menuOpen {
+nav.openMenu {
   visibility: visible;
   opacity: 1;
 
@@ -67,10 +73,12 @@ nav.menuOpen {
 
   position: fixed;
   top: 0;
+
+  z-index: 100;
   
 }
 
-nav.menuOpen header {
+nav.openMenu header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -102,6 +110,13 @@ border-bottom: 1px solid #29292E;
 .navigation a {
   margin-left: 3.1rem;
 }
+
+.navigation:hover {
+  border-left: ;
+}
+
+
+
 
 
 /* --------- MAIN ------------- */
@@ -172,8 +187,16 @@ main span {
   color: #000;
 }
 
-main > img {
-  max-width: 100%;
+
+footer > img {
+  max-width: 100vw;
+  margin: auto;
+
+  position: relative;
+  bottom: 0;
+  left: 50%;
+
+  transform: translate(-50%);
 }
 
 @media ()
