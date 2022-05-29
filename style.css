@@ -117,6 +117,11 @@ nav.openMenu header {
   border-bottom: 1px solid #29292E;
 }
 
+nav button {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .navigation {
 display: flex;
 align-items: center;
@@ -225,6 +230,17 @@ footer > img {
 
 @media (min-width: 1024px){
 
+  /* ------- GERAL ---------- */
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    background: none;
+    background-color: #000;
+    background-image: url(assets/blur-2.png), url(assets/blur-1.png);
+    background-position: right top, left bottom;
+    background-repeat: no-repeat;
+  }
   /* -------- HEADER/NAV ------------ */
 
   header.mobile, h2, button {
@@ -234,38 +250,44 @@ footer > img {
     z-index: -1;
   }
 
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    position: relative;
-    top: 0;
-    border: none
-  }
-
-  nav button {
-    visibility: visible;
-    opacity: 1;
-  }
-
-  nav, nav header, nav div#navigation{
+  nav, nav header, nav div#navigation, nav button{
     margin: 0;
     padding: 0;
     visibility: visible;
     opacity: 1;
     border: none;
+    position: relative;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+
+    height: 5rem;
+
+    margin-top: 5rem;
   }
 
   nav div.navigation{
     border: none; 
   }
+  .navigation:hover {
+    border: none;
+    border-bottom: 5px solid #8257E6;
+    font-weight: 700;
+
+    transition: border 0.4s;
+  }
+
   nav div#navigation a {
     margin: 0;
   }
-
+  
   nav div#navigation {
     display: flex;
+    gap: 3.243rem;
   }
 
   nav .button {
@@ -275,11 +297,40 @@ footer > img {
     z-index: -1;
   }
 
+  nav picture img {
+    margin-right: 12rem;
+  }
+
+  nav button {
+    border: 1px solid #8257E5;
+    border-radius: 6px;
+  }
+
 
   /* --------- MAIN ------------- */
 
   main {
-    margin-top: 14rem;
+    margin-top: 4rem;
+    max-width: 60rem;
+    height: 20.4rem;
   }
 
+  main h1 {
+    font-size: 8rem;
+    line-height: 10.9rem;
+    letter-spacing: -0.03rem;
+  }
+
+  /* -------- FOOTER --------- */
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    max-width: 100vw;
+    margin: auto;
+
+    left: 50%;
+
+    transform: translate(-50%);
+  }
 }
